@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Automation Suite">
+
+  <test name="Chrome Browser">
+  	<parameter name="browser" value="chrome" />
+  	<parameter name="url" value = "https://www.selenium.dev/selenium/docs/api/java/index.html?org/openqa/selenium/package-summary.html" />  
+    <classes>
+       <class name="com.automation.sanity.HandlingFrameUsingName"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="FireFox Browser">
+  	<parameter name="browser" value="firefox" />
+  	<parameter name="url" value = "https://www.selenium.dev/selenium/docs/api/java/index.html?org/openqa/selenium/package-summary.html" />  
+    <classes>
+      <class name="com.automation.sanity.HandlingFrameUsingName"/>
+    </classes>
+  </test> <!-- Test -->  
+  
+   <test name="Edge Browser">
+  	<parameter name="browser" value="edge" />
+  	<parameter name="url" value = "https://www.selenium.dev/selenium/docs/api/java/index.html?org/openqa/selenium/package-summary.html" />  
+    <classes>
+      <class name="com.automation.sanity.HandlingFrameUsingName"/>
+    </classes>
+  </test> <!-- Test -->  
+  
+  
+</suite> <!-- Suite -->

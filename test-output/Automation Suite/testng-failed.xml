@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Automation Suite]">
+  <test thread-count="5" name="FireFox Browser(failed)">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://www.selenium.dev/selenium/docs/api/java/index.html?org/openqa/selenium/package-summary.html"/>
+    <classes>
+      <class name="com.automation.sanity.HandlingFrameUsingName">
+        <methods>
+          <include name="handlingFrames"/>
+          <include name="launchApplication"/>
+          <include name="closeApplication"/>
+        </methods>
+      </class> <!-- com.automation.sanity.HandlingFrameUsingName -->
+    </classes>
+  </test> <!-- FireFox Browser(failed) -->
+</suite> <!-- Failed suite [Automation Suite] -->
