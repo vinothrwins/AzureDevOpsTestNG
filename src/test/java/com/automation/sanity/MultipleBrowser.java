@@ -1,6 +1,6 @@
 package com.automation.sanity;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MultipleBrowser {
 	
@@ -19,19 +21,19 @@ public class MultipleBrowser {
 	public void launchApplication(String browser,String url) {
 		
 		if(browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", ".//Drivers//chromedriver");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "..//Drivers//geckodriver");
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();			
 		}	
 		else if(browser.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.edge.driver", "//AzureDevOpsTestNG//Drivers///msedgedriver");
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		// Launch the Home URL
 		driver.get(url);
