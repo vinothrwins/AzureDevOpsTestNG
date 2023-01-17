@@ -19,15 +19,15 @@ public class MultipleBrowser {
 	public void launchApplication(String browser,String url) {
 		
 		if(browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "//Drivers//chromedriver");
+			System.setProperty("webdriver.chrome.driver", ".//Drivers//chromedriver");
 			driver = new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", ".//Drivers//geckodriver");
+			System.setProperty("webdriver.gecko.driver", "..//Drivers//geckodriver");
 			driver = new FirefoxDriver();			
 		}	
 		else if(browser.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.edge.driver", "//Drivers///msedgedriver");
+			System.setProperty("webdriver.edge.driver", "//AzureDevOpsTestNG//Drivers///msedgedriver");
 			driver = new EdgeDriver();
 		}
 		
