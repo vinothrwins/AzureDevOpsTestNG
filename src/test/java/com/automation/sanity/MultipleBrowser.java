@@ -21,15 +21,15 @@ public class MultipleBrowser {
 	public void launchApplication(String browser,String url) {
 		
 		if(browser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().setup();
+			
 			driver = new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+			
 			driver = new FirefoxDriver();			
 		}	
 		else if(browser.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
+			
 			driver = new EdgeDriver();
 		}
 		
