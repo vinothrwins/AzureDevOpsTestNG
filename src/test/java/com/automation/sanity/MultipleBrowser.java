@@ -19,7 +19,7 @@ public class MultipleBrowser {
 	public void launchApplication(String browser,String url) {
 		
 		if(browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver");
+			System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
 			
 			driver = new ChromeDriver();
 		}
